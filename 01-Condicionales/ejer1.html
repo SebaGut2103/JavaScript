@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let a = Number (prompt("Ingrese el primer número"));
+    let b = Number (prompt("Ingrese el segundo número"));
+    let c = Number (prompt("Ingrese el tercer número"));
+    let demo = 2 * a
+    let opera = b**2 - 4 * a * c
+    if(demo != 0 && opera > 0){
+        let x1 = (-b + Math.sqrt(opera)) / demo
+        let  x2 = (-b - Math.sqrt(opera))/ demo
+        document.write(x1)
+        document.write(x2)
+    }
+</script>
+</html>
