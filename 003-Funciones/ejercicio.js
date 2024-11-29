@@ -5,62 +5,16 @@ programa debe calcular y mostrar,en forma tabular,el dato del valor total a paga
 la cuota mensual de abono. Luego, su programa mostrará la tabla de amortización del crédito
 simple.
 */
-
-const encabezadoConsola = function (){
-    let titulo = "Mes\t\tValor\t\tCapital\t\tInteres\\Total";
-    console.log("Mes\t\tValor\t\tCapital\t\tInteres\\Total");
-    
-}
-
-const cuerpoConsola = (año, valor) => console.log(`${año}\t\t $${valor}`);
-
-const pieConsola = () =>  console.log("=".repeat(40));
-function encabezadoWeb(){
-    document.write(
-        `
-        <table border="1" width="45%">
-        <tr>
-            <th>Monto del crédito:</th>
-        </tr>
-        <tr>
-        <th>Interés (anual):</th>
-        </tr>
-        <tr>
-        <th>Números de pagos (mensuales):</th>
-        </tr>
-        `);
-};
-
-const pieWeb = () => document.write("</table>");
-
-const cuerpoWeb = function(month, inv){
-    let background = month % 2 == 0 ? "white" : "grey"
-    let fila = `<tr  style='background: ${background}'>
-        <td style='text-align: center;''>${month}</td>
-        </tr>
-        <tr  style='background: ${background}'>
-        <td style='text-align: center;'>${inv}</td>
-    </tr>`;
-    document.write(fila);
-}
-
-function rendimiento(inversion, tasa, tiempo){
-    encabezadoConsola();
-    encabezadoWeb();
-    for (let i = 1; i <=tiempo; i++){
-        let final = Number ((inversion * (1 + tasa)  ).toFixed(2));
-
-        cuerpoConsola(i, final);
-        cuerpoWeb(i, final);
-        inversion = final;
+function pagos(capitas, teimpo, interes){
+    let i = 1 + interes
+    let ip= interes*100
+    let monto = 0
+    let t = tiempo*12
+    for(let k = 1; k <= t; k++){
+        let sub = monto + capital;
+        let ai = sub*i;
     }
-    pieConsola();
-    pieWeb();
+    console.log("Si tu ahorras al mes $"+capital+" con un interes mensual de "+ip+"% a "+tiempo+" meses, tendras un monto final de $"+monto+" pesos.")
+    return monto
+
 }
-
-let inversion = Number(prompt("Valor de la inversión inicial", 150.00));
-
-const TasaInteres = 0.12;
-const TIEMPO = 12;
-
-rendimiento(inversion, TasaInteres, TIEMPO);
