@@ -5,7 +5,7 @@ programa debe calcular y mostrar,en forma tabular,el dato del valor total a paga
 la cuota mensual de abono. Luego, su programa mostrará la tabla de amortización del crédito
 simple.
 */
-function pagos(capitas, teimpo, interes){
+function pagos(capital, tiempo, interes){
     let i = 1 + interes
     let ip= interes*100
     let monto = 0
