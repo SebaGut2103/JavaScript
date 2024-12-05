@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lectura de un archivo usando promesas</h1>
+    <hr>
+    <input type="file" name="selfile" id="selfile" onclick="">
+
+
+</body>
+<script>
+function readfile(archive){
+    return new Promise((resolve, reject) =>{
+        const lector = new FileReader();
+        lector.onload = () => resolve(lector.result);
+        lector.onerror = () => reject("Error. No se pudo leer el archivo");
+        lector.readAsText(archive);
+    });
+}
+
+document.getElementById("Selfile").addEventListener("Change",
+    (evento) => {
+        const archive = evento.target.files[0];
+        console.log("Archivo seleccionado: " + archive)
+        if(archive) {
+            readfile(archive)
+                .then(content => console.log("Contenido archive:\n", content))
+                .catch(error => console.log("Error al leer el archiv:", error));
+        }
+    });
+    </script>
+</html>
