@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo-1</title>
+</head>
+<script>
+    async function getData(){
+        const response = await fetch("data.json");
+        const data =await response.json();
+        console.log(typeof data);
+        console.log(data);
+    }
+    console.log("código sincróno");
+    getData();
+</script>
+<body>
+    <h1>Asincronía con Asyn Await</h1>
+    <hr>
+    <hr>
+    obtener los archivos de un JSON
+</body>
+
+</html>

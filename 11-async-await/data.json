@@ -1,0 +1,17 @@
+{
+    "Empleados": [
+        {
+        "nombre": "Juan",
+        "apellidos": "lopez"
+        },
+        {
+            "nombre": "Ana",
+            "apellidos": "Gonzales"
+        },
+        {
+            "nombre": "Pedro",
+            "apellidos":"Sanchez"
+        }
+    ]
+
+}
